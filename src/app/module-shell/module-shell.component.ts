@@ -38,4 +38,8 @@ export class ModuleShellComponent implements OnInit,  AfterViewInit{
   public cancelWorkflow() {
     this.el.nativeElement.dispatchEvent(new CustomEvent('CustomWebcomponentEvent', { bubbles: true, cancelable: true, detail: 'cancel workflow (dispatched)' }));
   }
+
+  public activityConfObject(): any {
+    return this.el.nativeElement.activityConf;
+  }
 }
