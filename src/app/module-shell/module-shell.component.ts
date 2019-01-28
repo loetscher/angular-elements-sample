@@ -1,4 +1,4 @@
-import { Component, Output, Input, EventEmitter, ElementRef, OnInit,  AfterViewInit,ViewEncapsulation } from '@angular/core';
+import { Component, Output, Input, EventEmitter, ElementRef, OnInit,  AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,12 +6,16 @@ import { Router } from '@angular/router';
   templateUrl: './module-shell.component.html',
   styleUrls: ['./module-shell.component.scss'],
 })
-export class ModuleShellComponent implements OnInit,  AfterViewInit{
+export class ModuleShellComponent implements OnInit,  AfterViewInit {
 
-  @Output() cancelWfl = new EventEmitter<string>();
-  @Input() activityConf:any;
-  @Input() activityConfId:string;
-  @Input() testInput = "dummy";
+  @Output()
+  cancelWfl = new EventEmitter<string>();
+  @Input()
+  activityConf: any;
+  @Input()
+  activityConfId: string;
+  @Input()
+  testInput = 'dummy';
 
   private id: string;
 
@@ -32,11 +36,13 @@ export class ModuleShellComponent implements OnInit,  AfterViewInit{
   }
 
   public cancelWorkflowNG() {
-    this.cancelWfl.emit("cancel workflow (EventEmmitter)");
+    this.cancelWfl.emit('cancel workflow (EventEmmitter)');
   }
 
   public cancelWorkflow() {
-    this.el.nativeElement.dispatchEvent(new CustomEvent('CustomWebcomponentEvent', { bubbles: true, cancelable: true, detail: 'cancel workflow (dispatched)' }));
+    const customEvent = new CustomEvent('CustomWebcomponentEvent', {
+      bubbles: true, cancelable: true, detail: 'cancel workflow (dispatched)' });
+    this.el.nativeElement.dispatchEvent(customEvent);
   }
 
   public activityConfObject(): any {

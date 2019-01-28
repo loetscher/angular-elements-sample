@@ -1,17 +1,35 @@
 <main>
-  <button mat-raised-button
-    (click)="cancelWorkflowNG()">Cancel Workflow (NG)</button>
-  <button mat-raised-button
-    (click)="cancelWorkflow()">Cancel Workflow (Dom)</button>
-  <button mat-raised-button
-          routerLink="/page1">Page 1</button>
-  <button mat-raised-button
-          routerLink="/page2">Page 2</button>
+  <button mat-raised-button (click)="cancelWorkflowNG()">Cancel Workflow (NG)</button>
+  <button mat-raised-button (click)="cancelWorkflow()">Cancel Workflow (Dom)</button>
+  <button mat-raised-button routerLink="/page1">Page 1</button>
+  <button mat-raised-button routerLink="/page2">Page 2</button>
   <h2>Loaded Page Content:</h2>
   <span>
-    Hello from another angular app!
+    Hello from another angular app (WebComponent)!
   </span>
-  <hr/>
-  <div>Activity Configuration: {{activityConfObject() | json }}</div>
+  <hr />
+  <div>Activity Configuration (dom):
+    <pre>
+    {{activityConfObject() | json }}
+  </pre>
+  </div>
+  <div>
+    Activity Configuration:
+    <pre>
+      {{activityConf | json}}
+  </pre>
+  </div>
+  <div>
+    Activity ConfigurationId:
+    <pre>
+    {{activityConfId}}
+  </pre>
+  </div>
+  <div>
+    testInput:
+    <pre>
+      {{testInput}}
+    </pre>
+  </div>
   <router-outlet></router-outlet>
 </main>

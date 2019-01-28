@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port=4201 --sourcemap=false --vendor-chunk=true --common-chunk=false",
-    "startLocalhost": "http-server bin -p 8091 --cors",
+    "startLocalhost": "ng build && http-server dist -p 8091 --cors",
     "build": "ng build --prod --sourcemap=false --vendor-chunk=true --common-chunk=false --output-hashing none",
     "alias": "cd ./dist && now alias",
     "deploy": "yarn build && now ./dist -p",
