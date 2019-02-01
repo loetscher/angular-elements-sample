@@ -12,6 +12,8 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { routes } from 'app/routes';
 import { ModuleShellComponent } from './module-shell/module-shell.component';
+import { BackendService } from './common/backend.service';
+import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 
 export const webComponents = [
   ModuleShellComponent,
@@ -34,9 +36,12 @@ export const webComponents = [
     BrowserAnimationsModule,
     MaterialModule,
     RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: MockLocationStrategy }
+    { provide: LocationStrategy, useClass: MockLocationStrategy
+    },
+    BackendService
   ],
 })
 export class AppModule {

@@ -1,5 +1,6 @@
 import { Component, Output, Input, EventEmitter, ElementRef, OnInit,  AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { BackendService } from 'app/common/backend.service';
 
 @Component({
   selector: 'app-module-shell',
@@ -18,10 +19,12 @@ export class ModuleShellComponent implements OnInit,  AfterViewInit {
   testInput = 'dummy';
 
   private id: string;
+  private vehicle: any;
 
   constructor(
     private router: Router,
-    private el: ElementRef
+    private el: ElementRef,
+    private backenService: BackendService
   ) { }
 
   ngOnInit() {
@@ -32,6 +35,7 @@ export class ModuleShellComponent implements OnInit,  AfterViewInit {
   ngAfterViewInit() {
     if (this.activityConfId) {
       this.id = this.activityConfId;
+      this.loadVehicle(this.id );
     }
   }
 
@@ -45,7 +49,15 @@ export class ModuleShellComponent implements OnInit,  AfterViewInit {
     this.el.nativeElement.dispatchEvent(customEvent);
   }
 
-  public activityConfObject(): any {
-    return this.el.nativeElement.activityConf;
+  // public activityConfObject(): any {
+  //   return this.el.nativeElement.activityConf;
+  // }
+
+  private loadVehicle(objId: string, entity = 'VEH') {
+    this.backenService.getDetailEntryById(entity, objId).subscribe(record => {
+      if (record && record.data) {
+        this.vehicle = record.data[0];
+      }
+  });
   }
 }

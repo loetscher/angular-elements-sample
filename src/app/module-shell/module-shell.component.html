@@ -8,11 +8,13 @@
     Hello from another angular app (WebComponent)!
   </span>
   <hr />
-  <div>Activity Configuration (dom):
-    <pre>
-    {{activityConfObject() | json }}
-  </pre>
-  </div>
+  <!--
+    <div>Activity Configuration (dom):
+      <pre>
+        {{activityConfObject() | json }}
+      </pre>
+    </div>
+  -->
   <div>
     Activity Configuration:
     <pre>
@@ -31,5 +33,11 @@
       {{testInput}}
     </pre>
   </div>
+  <div>
+      Vehicle Information:
+      <pre>
+        {{vehicle | json}}
+      </pre>
+    </div>
   <router-outlet></router-outlet>
 </main>

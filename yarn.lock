@@ -313,6 +313,16 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-rest-client@^2.0.0:
+  version "2.0.0"
+  resolved "http://repo.bison-group.com:80/artifactory/api/npm/npm-cache/angular-rest-client/-/angular-rest-client-2.0.0.tgz#187d64ff614f742ac7ff9c02d43fdcc064ed7464"
+  dependencies:
+    "@angular/common" "^5.0.0"
+    "@angular/core" "^5.0.0"
+    "@angular/platform-browser" "^5.0.0"
+    rxjs "5.5.0"
+    zone.js "0.8.4"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
@@ -4935,6 +4945,12 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
+rxjs@5.5.0:
+  version "5.5.0"
+  resolved "http://repo.bison-group.com:80/artifactory/api/npm/npm-cache/rxjs/-/rxjs-5.5.0.tgz#26d8f3866eb700e247e0728a147c3d628993d812"
+  dependencies:
+    symbol-observable "^1.0.1"
+
 rxjs@^5.5.2:
   version "5.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.5.tgz#e164f11d38eaf29f56f08c3447f74ff02dd84e97"
@@ -5495,6 +5511,10 @@ svgo@^0.7.0:
 symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
+
+symbol-observable@^1.0.1:
+  version "1.2.0"
+  resolved "http://repo.bison-group.com:80/artifactory/api/npm/npm-cache/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 tapable@^0.2.7:
   version "0.2.8"
@@ -6271,6 +6291,10 @@ yeast@0.1.2:
 yn@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
+
+zone.js@0.8.4:
+  version "0.8.4"
+  resolved "http://repo.bison-group.com:80/artifactory/api/npm/npm-cache/zone.js/-/zone.js-0.8.4.tgz#cc40ae5a1c879601c5ebba2096b5c80f0c4c3602"
 
 zone.js@^0.8.14:
   version "0.8.18"
